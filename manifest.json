@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Cryptoblades Win Chance",
+  "description": "Cryptoblades automatic win chance computer based on https://wax-dapps.site/crypto-blades/combat.",
+  "version": "0.0.6",
+  "background": {
+    "persistent": false
+,    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*.cryptoblades.io/*"],
+    "js": ["content.js"]
+  }],
+  "browser_action": {
+    "default_title": "Compute Win Chance"
+  },
+  "permissions": ["activeTab"]
+}
